@@ -1,8 +1,8 @@
 package main
 
 import (
+	another "/../anotherFootballPlayer"
 	"fmt"
-	another "fundamentals/ch04/struct/anotherFootballPlayer"
 )
 
 type FootballPlayer struct {
