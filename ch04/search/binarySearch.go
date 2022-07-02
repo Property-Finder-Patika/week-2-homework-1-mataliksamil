@@ -3,6 +3,7 @@ package main
 import "fmt"
 
 func main() {
+	// ordered array of integers
 	var integers = []int{-8, 0, 1, 3, 7, 18, 74, 101, 223, 395, 683, 911}
 
 	var key = 3
@@ -35,12 +36,12 @@ func BinarySearchIteratively(array []int, key int) bool {
 		return false
 	}
 
-	for found != true {
+	for found != true { // iterate until find
 		var middle int = (end + start) / 2
-		var element int = array[middle]
+		var element int = array[middle] // always checks middle of the remainder slice
 		if key == element {
 			found = true
-			break
+			break // break case where key is found
 		} else if key < element {
 			end = middle - 1
 		} else if key > element {
@@ -48,7 +49,7 @@ func BinarySearchIteratively(array []int, key int) bool {
 		}
 
 		if start > end {
-			break
+			break // cannot find the key in the array
 		}
 	}
 	return found
@@ -60,25 +61,25 @@ func BinarySearchRecursively(array []int, key int) bool {
 	var start int = 0
 	var end int = length - 1
 
-	if key < array[start] {
+	if key < array[start] { // key is not in the array
 		return false
 	}
-	if key > array[end] {
+	if key > array[end] { // key is not in the array 2
 		return false
 	}
 
-	var middle int = (end + start) / 2
+	var middle int = (end + start) / 2 // always check nmiddle of the slice
 	var element int = array[middle]
-	if key == element {
+	if key == element { // key is found so return true
 		return true
 	} else {
-		if key < element {
+		if key < element { // key is in the lower part of the array
 			end = middle - 1
-		} else if key > element {
+		} else if key > element { // key is in the upper half of the array
 			start = middle + 1
 		}
-		slice := array[start : end+1]
-		found = BinarySearchRecursively(slice, key)
+		slice := array[start : end+1]               // array cut into half
+		found = BinarySearchRecursively(slice, key) // recursion if not found until it returns true
 	}
 	return found
 }
