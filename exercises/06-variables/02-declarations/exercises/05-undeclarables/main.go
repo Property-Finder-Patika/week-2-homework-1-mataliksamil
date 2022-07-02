@@ -7,6 +7,7 @@
 // Follow me on twitter: https://twitter.com/inancgumus
 
 package main
+import "fmt"
 
 // ---------------------------------------------------------
 // EXERCISE: Undeclarables
@@ -32,4 +33,10 @@ func main() {
 	// var ? int
 	// var ? int
 	// var ? int
+
+/* 	var 3speed int
+	var spee?ed int */
+	var package int 
+
+
 }

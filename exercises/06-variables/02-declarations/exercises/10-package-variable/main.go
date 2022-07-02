@@ -16,6 +16,8 @@ package main
 //  2. Observe whether something happens when you don't
 //     use it
 // ---------------------------------------------------------
+var packVar int
 
 func main() {
+	// nothing has happened no unused error
 }

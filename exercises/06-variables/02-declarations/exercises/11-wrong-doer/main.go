@@ -8,6 +8,8 @@
 
 package main
 
+import "fmt"
+
 // ---------------------------------------------------------
 // EXERCISE: Wrong doer
 //
@@ -25,4 +27,10 @@ func main() {
 
 	// Then declare it:
 	// var ? ?
+
+	fmt.Println(newVar)
+	var newVar int
+
+	// undeclared error and declared but not used error at the same time
+
 }

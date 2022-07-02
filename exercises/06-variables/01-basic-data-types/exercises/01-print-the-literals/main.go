@@ -8,6 +8,8 @@
 
 package main
 
+import "fmt"
+
 // ---------------------------------------------------------
 // EXERCISE: Print the literals
 //
@@ -24,5 +26,9 @@ package main
 // ---------------------------------------------------------
 
 func main() {
-	// Use fmt.Println()
+	fmt.Println(132, 456, -5000, 999999999999999999)
+	fmt.Println(3.25, -758.648, 123456789.65432198745612345678945612345678954655232854165146514654165146516516584168516516513513651)
+	fmt.Println(true, false)
+	fmt.Println("Muhammet Şamil Atalık")
+	fmt.Println("مرحبا اسمي شامل") // arapçayı olduğu gibi (sağdan sola) bastırmadı
 }
