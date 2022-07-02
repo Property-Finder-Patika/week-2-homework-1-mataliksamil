@@ -8,6 +8,8 @@
 
 package main
 
+import "fmt"
+
 // ---------------------------------------------------------
 // EXERCISE: Incdecs
 //
@@ -28,7 +30,12 @@ func main() {
 
 	// TYPE YOUR CODE BELOW
 	// ...
-
+	counter += 5
+	counter += 5
+	counter += 5
+	counter += 5
+	counter += 10
+	factor--
+	fmt.Println(counter, factor)
 	// LASTLY: REMOVE THE CODE BELOW
-	_, _ = counter, factor
 }
